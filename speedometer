@@ -1,0 +1,313 @@
+	//Speedometer
+
+	speed_global_td[0] = TextDrawCreate(372.500030, 378.214599, "LD_BEAT:chit"); // Texture element
+	TextDrawLetterSize(speed_global_td[0], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[0], 13.333292, 13.688917);
+	TextDrawAlignment(speed_global_td[0], 1);
+	TextDrawColor(speed_global_td[0], 1577421567);
+	TextDrawSetShadow(speed_global_td[0], 0);
+	TextDrawSetOutline(speed_global_td[0], 0);
+	TextDrawFont(speed_global_td[0], 4);
+
+	speed_global_td[1] = TextDrawCreate(379.166656, 380.618499, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[1], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[1], 111.333305, 11.199995);
+	TextDrawAlignment(speed_global_td[1], 1);
+	TextDrawColor(speed_global_td[1], 1577421567);
+	TextDrawSetShadow(speed_global_td[1], 0);
+	TextDrawSetOutline(speed_global_td[1], 0);
+	TextDrawFont(speed_global_td[1], 4);
+
+	speed_global_td[2] = TextDrawCreate(483.500000, 378.214538, "LD_BEAT:chit"); // Texture element
+	TextDrawLetterSize(speed_global_td[2], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[2], 13.666625, 14.518545);
+	TextDrawAlignment(speed_global_td[2], 1);
+	TextDrawColor(speed_global_td[2], 1577421567);
+	TextDrawSetShadow(speed_global_td[2], 0);
+	TextDrawSetOutline(speed_global_td[2], 0);
+	TextDrawFont(speed_global_td[2], 4);
+
+	speed_global_td[3] = TextDrawCreate(374.666625, 384.925903, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[3], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[3], 126.999961, 40.651855);
+	TextDrawAlignment(speed_global_td[3], 1);
+	TextDrawColor(speed_global_td[3], -1777803882);
+	TextDrawSetShadow(speed_global_td[3], 0);
+	TextDrawSetOutline(speed_global_td[3], 0);
+	TextDrawFont(speed_global_td[3], 4);
+
+	speed_global_td[4] = TextDrawCreate(372.500030, 423.014648, "LD_BEAT:chit"); // Texture element
+	TextDrawLetterSize(speed_global_td[4], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[4], 13.333292, 13.688917);
+	TextDrawAlignment(speed_global_td[4], 1);
+	TextDrawColor(speed_global_td[4], 1577421567);
+	TextDrawSetShadow(speed_global_td[4], 0);
+	TextDrawSetOutline(speed_global_td[4], 0);
+	TextDrawFont(speed_global_td[4], 4);
+
+	speed_global_td[5] = TextDrawCreate(483.833190, 423.014648, "LD_BEAT:chit"); // Texture element
+	TextDrawLetterSize(speed_global_td[5], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[5], 13.333292, 13.688917);
+	TextDrawAlignment(speed_global_td[5], 1);
+	TextDrawColor(speed_global_td[5], 1577421567);
+	TextDrawSetShadow(speed_global_td[5], 0);
+	TextDrawSetOutline(speed_global_td[5], 0);
+	TextDrawFont(speed_global_td[5], 4);
+
+	speed_global_td[6] = TextDrawCreate(498.166687, 381.851898, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[6], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[6], 3.999974, 48.118515);
+	TextDrawAlignment(speed_global_td[6], 1);
+	TextDrawColor(speed_global_td[6], 1577421567);
+	TextDrawSetShadow(speed_global_td[6], 0);
+	TextDrawSetOutline(speed_global_td[6], 0);
+	TextDrawFont(speed_global_td[6], 4);
+
+	speed_global_td[7] = TextDrawCreate(462.166625, 384.659240, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[7], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[7], 33.000003, 42.725921);
+	TextDrawAlignment(speed_global_td[7], 1);
+	TextDrawColor(speed_global_td[7], 1577421567);
+	TextDrawSetShadow(speed_global_td[7], 0);
+	TextDrawSetOutline(speed_global_td[7], 0);
+	TextDrawFont(speed_global_td[7], 4);
+
+	speed_global_td[8] = TextDrawCreate(391.500122, 405.274017, "km/h"); // speed (120)
+	TextDrawLetterSize(speed_global_td[8], 0.216995, 1.214218);
+	TextDrawAlignment(speed_global_td[8], 2);
+	TextDrawColor(speed_global_td[8], -1);
+	TextDrawUseBox(speed_global_td[8], true);
+	TextDrawBoxColor(speed_global_td[8], 0);
+	TextDrawSetShadow(speed_global_td[8], 0);
+	TextDrawSetOutline(speed_global_td[8], 0);
+	TextDrawBackgroundColor(speed_global_td[8], -256);
+	TextDrawFont(speed_global_td[8], 1);
+	TextDrawSetProportional(speed_global_td[8], 1);
+
+	speed_global_td[9] = TextDrawCreate(379.166595, 428.407379, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[9], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[9], 28.999950, 6.222239);
+	TextDrawAlignment(speed_global_td[9], 1);
+	TextDrawColor(speed_global_td[9], 1577421567);
+	TextDrawSetShadow(speed_global_td[9], 0);
+	TextDrawSetOutline(speed_global_td[9], 0);
+	TextDrawFont(speed_global_td[9], 4);
+
+	speed_global_td[10] = TextDrawCreate(407.000061, 422.418457, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[10], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[10], 83.666610, 12.029644);
+	TextDrawAlignment(speed_global_td[10], 1);
+	TextDrawColor(speed_global_td[10], 1577421567);
+	TextDrawSetShadow(speed_global_td[10], 0);
+	TextDrawSetOutline(speed_global_td[10], 0);
+	TextDrawFont(speed_global_td[10], 4);
+
+	speed_global_td[11] = TextDrawCreate(490.666870, 422.588836, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[11], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[11], 4.666604, 7.466682);
+	TextDrawAlignment(speed_global_td[11], 1);
+	TextDrawColor(speed_global_td[11], 1577421567);
+	TextDrawSetShadow(speed_global_td[11], 0);
+	TextDrawSetOutline(speed_global_td[11], 0);
+	TextDrawFont(speed_global_td[11], 4);
+
+	speed_global_td[12] = TextDrawCreate(411.833496, 389.288635, "engine~n~light~n~doors"); // speed (120)
+	TextDrawLetterSize(speed_global_td[12], 0.142655, 0.994368);
+	TextDrawAlignment(speed_global_td[12], 1);
+	TextDrawColor(speed_global_td[12], -1);
+	TextDrawUseBox(speed_global_td[12], true);
+	TextDrawBoxColor(speed_global_td[12], 0);
+	TextDrawSetShadow(speed_global_td[12], 0);
+	TextDrawSetOutline(speed_global_td[12], 0);
+	TextDrawBackgroundColor(speed_global_td[12], -256);
+	TextDrawFont(speed_global_td[12], 2);
+	TextDrawSetProportional(speed_global_td[12], 1);
+
+	speed_global_td[13] = TextDrawCreate(374.666870, 422.514770, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[13], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[13], 33.333274, 6.637052);
+	TextDrawAlignment(speed_global_td[13], 1);
+	TextDrawColor(speed_global_td[13], 1577421567);
+	TextDrawSetShadow(speed_global_td[13], 0);
+	TextDrawSetOutline(speed_global_td[13], 0);
+	TextDrawFont(speed_global_td[13], 4);
+
+	speed_global_td[14] = TextDrawCreate(465.000183, 380.948181, "LD_BEAT:chit"); // box decorative
+	TextDrawLetterSize(speed_global_td[14], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[14], 25.466640, 29.534811);
+	TextDrawAlignment(speed_global_td[14], 1);
+	TextDrawColor(speed_global_td[14], -1777803777);
+	TextDrawSetShadow(speed_global_td[14], 0);
+	TextDrawSetOutline(speed_global_td[14], 0);
+	TextDrawFont(speed_global_td[14], 4);
+
+	speed_global_td[15] = TextDrawCreate(467.333496, 383.851837, "LD_BEAT:chit"); // box decorative
+	TextDrawLetterSize(speed_global_td[15], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[15], 20.799974, 23.727405);
+	TextDrawAlignment(speed_global_td[15], 1);
+	TextDrawColor(speed_global_td[15], 1577421567);
+	TextDrawSetShadow(speed_global_td[15], 0);
+	TextDrawSetOutline(speed_global_td[15], 0);
+	TextDrawFont(speed_global_td[15], 4);
+
+	speed_global_td[16] = TextDrawCreate(475.333496, 396.466674, "LD_BEAT:chit"); // box decorative
+	TextDrawLetterSize(speed_global_td[16], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[16], 4.466639, 5.475544);
+	TextDrawAlignment(speed_global_td[16], 1);
+	TextDrawColor(speed_global_td[16], -1777803777);
+	TextDrawSetShadow(speed_global_td[16], 0);
+	TextDrawSetOutline(speed_global_td[16], 0);
+	TextDrawFont(speed_global_td[16], 4);
+
+	speed_global_td[17] = TextDrawCreate(477.166687, 391.744415, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[17], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[17], 0.999979, 7.051867);
+	TextDrawAlignment(speed_global_td[17], 1);
+	TextDrawColor(speed_global_td[17], -1777803777);
+	TextDrawSetShadow(speed_global_td[17], 0);
+	TextDrawSetOutline(speed_global_td[17], 0);
+	TextDrawFont(speed_global_td[17], 4);
+
+	speed_global_td[18] = TextDrawCreate(474.333984, 389.173400, "F"); // text (box) amount of fuel
+	TextDrawLetterSize(speed_global_td[18], 0.167326, 1.093925);
+	TextDrawAlignment(speed_global_td[18], 2);
+	TextDrawColor(speed_global_td[18], -1);
+	TextDrawUseBox(speed_global_td[18], true);
+	TextDrawBoxColor(speed_global_td[18], 0);
+	TextDrawSetShadow(speed_global_td[18], 0);
+	TextDrawSetOutline(speed_global_td[18], 0);
+	TextDrawBackgroundColor(speed_global_td[18], -256);
+	TextDrawFont(speed_global_td[18], 2);
+	TextDrawSetProportional(speed_global_td[18], 1);
+
+	speed_global_td[19] = TextDrawCreate(466.833557, 417.781402, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[19], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[19], 22.999969, 0.829635);
+	TextDrawAlignment(speed_global_td[19], 1);
+	TextDrawColor(speed_global_td[19], -1777803882);
+	TextDrawSetShadow(speed_global_td[19], 0);
+	TextDrawSetOutline(speed_global_td[19], 0);
+	TextDrawFont(speed_global_td[19], 4);
+
+	speed_global_td[20] = TextDrawCreate(476.833435, 392.574005, "LD_BEAT:chit"); // box decorative
+	TextDrawLetterSize(speed_global_td[20], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[20], 1.799970, -2.405934);
+	TextDrawAlignment(speed_global_td[20], 1);
+	TextDrawColor(speed_global_td[20], -1777803777);
+	TextDrawSetShadow(speed_global_td[20], 0);
+	TextDrawSetOutline(speed_global_td[20], 0);
+	TextDrawFont(speed_global_td[20], 4);
+
+	speed_global_td[21] = TextDrawCreate(441.166503, 387.681457, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[21], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[21], 0.666643, 32.355556);
+	TextDrawAlignment(speed_global_td[21], 1);
+	TextDrawColor(speed_global_td[21], 1577421567);
+	TextDrawSetShadow(speed_global_td[21], 0);
+	TextDrawSetOutline(speed_global_td[21], 0);
+	TextDrawFont(speed_global_td[21], 4);
+
+	speed_global_td[22] = TextDrawCreate(442.333190, 387.681457, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[22], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[22], 0.666643, 32.355556);
+	TextDrawAlignment(speed_global_td[22], 1);
+	TextDrawColor(speed_global_td[22], 1577421567);
+	TextDrawSetShadow(speed_global_td[22], 0);
+	TextDrawSetOutline(speed_global_td[22], 0);
+	TextDrawFont(speed_global_td[22], 4);
+
+	speed_global_td[23] = TextDrawCreate(408.833190, 387.681457, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[23], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[23], 0.666643, 32.355556);
+	TextDrawAlignment(speed_global_td[23], 1);
+	TextDrawColor(speed_global_td[23], 1577421567);
+	TextDrawSetShadow(speed_global_td[23], 0);
+	TextDrawSetOutline(speed_global_td[23], 0);
+	TextDrawFont(speed_global_td[23], 4);
+
+	speed_global_td[24] = TextDrawCreate(407.999755, 387.851776, "LD_SPAC:white"); // Texture element
+	TextDrawLetterSize(speed_global_td[24], 0.000000, 0.000000);
+	TextDrawTextSize(speed_global_td[24], 0.666643, 32.355556);
+	TextDrawAlignment(speed_global_td[24], 1);
+	TextDrawColor(speed_global_td[24], 1577421567);
+	TextDrawSetShadow(speed_global_td[24], 0);
+	TextDrawSetOutline(speed_global_td[24], 0);
+	TextDrawFont(speed_global_td[24], 4);
+
+
+//Speedometer
+
+	speed_player_td[0][playerid] = CreatePlayerTextDraw(playerid, 391.833435, 389.499816, "200"); // speed (120)
+	PlayerTextDrawLetterSize(playerid, speed_player_td[0][playerid], 0.422996, 2.089477);
+	PlayerTextDrawAlignment(playerid, speed_player_td[0][playerid], 2);
+	PlayerTextDrawColor(playerid, speed_player_td[0][playerid], -1);
+	PlayerTextDrawUseBox(playerid, speed_player_td[0][playerid], true);
+	PlayerTextDrawBoxColor(playerid, speed_player_td[0][playerid], 0);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[0][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[0][playerid], 0);
+	PlayerTextDrawBackgroundColor(playerid, speed_player_td[0][playerid], -256);
+	PlayerTextDrawFont(playerid, speed_player_td[0][playerid], 1);
+	PlayerTextDrawSetProportional(playerid, speed_player_td[0][playerid], 1);
+
+	speed_player_td[1][playerid] = CreatePlayerTextDraw(playerid, 479.167053, 406.988372, "100L."); // text (box) amount of fuel
+	PlayerTextDrawLetterSize(playerid, speed_player_td[1][playerid], 0.163993, 1.127110);
+	PlayerTextDrawAlignment(playerid, speed_player_td[1][playerid], 2);
+	PlayerTextDrawColor(playerid, speed_player_td[1][playerid], -1);
+	PlayerTextDrawUseBox(playerid, speed_player_td[1][playerid], true);
+	PlayerTextDrawBoxColor(playerid, speed_player_td[1][playerid], 0);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[1][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[1][playerid], 0);
+	PlayerTextDrawBackgroundColor(playerid, speed_player_td[1][playerid], -256);
+	PlayerTextDrawFont(playerid, speed_player_td[1][playerid], 2);
+	PlayerTextDrawSetProportional(playerid, speed_player_td[1][playerid], 1);
+
+	speed_player_td[2][playerid] = CreatePlayerTextDraw(playerid, 433.666625, 392.818542, "LD_SPAC:white"); // box eng
+	PlayerTextDrawLetterSize(playerid, speed_player_td[2][playerid], 0.000000, 0.000000);
+	PlayerTextDrawTextSize(playerid, speed_player_td[2][playerid], 4.333374, 5.392578);
+	PlayerTextDrawAlignment(playerid, speed_player_td[2][playerid], 1);
+	PlayerTextDrawColor(playerid, speed_player_td[2][playerid], 1577421567);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[2][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[2][playerid], 0);
+	PlayerTextDrawFont(playerid, speed_player_td[2][playerid], 4);
+
+	speed_player_td[3][playerid] = CreatePlayerTextDraw(playerid, 433.666625, 401.818542, "LD_SPAC:white"); // box light
+	PlayerTextDrawLetterSize(playerid, speed_player_td[3][playerid], 0.000000, 0.000000);
+	PlayerTextDrawTextSize(playerid, speed_player_td[3][playerid], 4.333374, 5.392578);
+	PlayerTextDrawAlignment(playerid, speed_player_td[3][playerid], 1);
+	PlayerTextDrawColor(playerid, speed_player_td[3][playerid], 1577421567);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[3][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[3][playerid], 0);
+	PlayerTextDrawFont(playerid, speed_player_td[3][playerid], 4);
+
+	speed_player_td[4][playerid] = CreatePlayerTextDraw(playerid, 433.666625, 410.318542, "LD_SPAC:white"); // box doors
+	PlayerTextDrawLetterSize(playerid, speed_player_td[4][playerid], 0.000000, 0.000000);
+	PlayerTextDrawTextSize(playerid, speed_player_td[4][playerid], 4.333374, 5.392578);
+	PlayerTextDrawAlignment(playerid, speed_player_td[4][playerid], 1);
+	PlayerTextDrawColor(playerid, speed_player_td[4][playerid], 623191551);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[4][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[4][playerid], 0);
+	PlayerTextDrawFont(playerid, speed_player_td[4][playerid], 4);
+
+	speed_player_td[5][playerid] = CreatePlayerTextDraw(playerid, 377.833526, 421.462738, "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"); // box speed stripe
+	PlayerTextDrawLetterSize(playerid, speed_player_td[5][playerid], 0.275994, 1.371847);
+	PlayerTextDrawAlignment(playerid, speed_player_td[5][playerid], 1);
+	PlayerTextDrawColor(playerid, speed_player_td[5][playerid], -1);
+	PlayerTextDrawUseBox(playerid, speed_player_td[5][playerid], true);
+	PlayerTextDrawBoxColor(playerid, speed_player_td[5][playerid], 0);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[5][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[5][playerid], 0);
+	PlayerTextDrawBackgroundColor(playerid, speed_player_td[5][playerid], -256);
+	PlayerTextDrawFont(playerid, speed_player_td[5][playerid], 2);
+	PlayerTextDrawSetProportional(playerid, speed_player_td[5][playerid], 1);
+
+	speed_player_td[6][playerid] = CreatePlayerTextDraw(playerid, 451.833312, 390.988708, "000~n~025~n~km"); // text (box) amount of mileage
+	PlayerTextDrawLetterSize(playerid, speed_player_td[6][playerid], 0.173329, 0.957032);
+	PlayerTextDrawAlignment(playerid, speed_player_td[6][playerid], 2);
+	PlayerTextDrawColor(playerid, speed_player_td[6][playerid], -1);
+	PlayerTextDrawUseBox(playerid, speed_player_td[6][playerid], true);
+	PlayerTextDrawBoxColor(playerid, speed_player_td[6][playerid], 0);
+	PlayerTextDrawSetShadow(playerid, speed_player_td[6][playerid], 0);
+	PlayerTextDrawSetOutline(playerid, speed_player_td[6][playerid], 0);
+	PlayerTextDrawBackgroundColor(playerid, speed_player_td[6][playerid], -256);
+	PlayerTextDrawFont(playerid, speed_player_td[6][playerid], 1);
+	PlayerTextDrawSetProportional(playerid, speed_player_td[6][playerid], 1);
