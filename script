@@ -1,0 +1,76 @@
+new standart_vehicle[][vInfo] =
+{
+	{0, 0, 0, 200.0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 0, 0, 0, 0},
+	//
+  {414, 157, 157, 200.0, 0, 0.000000, -62.7501,-318.0251,5.1741,268.9456, 0, 0, 1, 1, 500, 0, 300},// ini mobil pengisian biz mad
+	{414, 157, 157, 200.0, 0, 0.000000, -62.7139,-314.4543,5.1740,270.4289, 0, 0, 1, 1, 500, 0, 300},
+	{552, 157, 157, 200.0, 0, 0.000000, -62.6353,-310.8776,5.1727,270.6335, 0, 0, 1, 1, 500, 0, 300},// ini mobil pengisian pom mad
+	{552, 157, 157, 200.0, 0, 0.000000, -62.7728,-307.3958,5.1061,271.2803, 0, 0, 1, 1, 500, 0, 300},
+	{552, 157, 157, 200.0, 0, 0.000000, -62.7615,-303.8114,5.1766,269.8152, 0, 0, 1, 1, 500, 0, 300},
+};
+
+CMD:load(playerid, params[])
+{
+	if(PlayerInfo[playerid][pJob] != WORK_TYPE_PRODUCT) return SCM(playerid, COLOR_GREY, "Anda tidak dapat menggunakan perintah ini.");
+
+	if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER) return Send(playerid, COLOR_GREY, "Anda pasti sedang mengemudi!");
+
+	if(player_product_id[playerid] == -1) return SCM(playerid, COLOR_GREY, "Anda tidak memiliki pesanan aktif, gunakan: /plist");
+
+	new order_id = player_product_id[playerid];
+	new vehicleid = GetPlayerVehicleID(playerid);
+
+	if(GetVehicleModel(vehicleid) != 414 && GetVehicleModel(vehicleid) != 552) return Send(playerid, COLOR_GREY, "Anda tidak berada di mobil yang berfungsi!");
+
+	if(GetVehicleModel(vehicleid) == 414)
+	{
+	    if(!PlayerToPoint(6.0, playerid, -14.5848,-271.6912,5.4297)) return Send(playerid,COLOR_GREY,"Anda harus berada di dekat gudang makanan.");
+
+		new need_prod = BizzInfo[order_id][bSklad] - BizzInfo[order_id][bProducts];
+
+		vehicle_load_prod[vehicleid] = need_prod;
+
+		SetPlayerCheckpoint(playerid, BizzInfo[order_id][bEntranceX], BizzInfo[order_id][bEntranceY], BizzInfo[order_id][bEntranceZ], 6.0);
+
+		format(String, sizeof(String), ""W"Anda telah berhasil mengunduh %d unit produk di dalam mobil.\nPergi ke pelanggan dan bongkar...\n\nTempat bongkar ditandai pada GPS Anda.", need_prod);
+	}
+	else
+	{
+	    if(!PlayerToPoint(6.0, playerid, -22.9999,-272.1464,5.4297)) return Send(playerid,COLOR_GREY,"Anda harus dekat depot bahan bakar.");
+
+        new need_fuel = BizzAInfo[order_id][aSklad] - BizzAInfo[order_id][aProducts];
+
+		vehicle_load_prod[vehicleid] = need_fuel;
+
+		SetPlayerCheckpoint(playerid, BizzAInfo[order_id][aAreaFillX], BizzAInfo[order_id][aAreaFillY], BizzAInfo[order_id][aAreaFillZ], 6.0);
+
+  		format(String, sizeof(String), ""W"Anda telah berhasil mengunduh %d liter per mobil.\nPergi ke pelanggan dan bongkar...\n\nTempat bongkar ditandai pada GPS Anda.", need_fuel);
+	}
+
+	return SPD(playerid,0000, DIALOG_STYLE_MSGBOX, "{FFB103}Memuat", String, "Tutup", "");
+}
+
+
+CMD:plist(playerid, params[])
+{
+	if(PlayerInfo[playerid][pJob] != WORK_TYPE_PRODUCT) return SCM(playerid, COLOR_GREY, "Anda tidak dapat menggunakan perintah ini.");
+
+	if(GetPlayerState(playerid) != PLAYER_STATE_DRIVER) return Send(playerid, COLOR_GREY, "Anda pasti sedang mengemudi!");
+
+	new vehicleid = GetPlayerVehicleID(playerid);
+
+	if(vehicleid != rent_job_vehicle[playerid]) return SCM(playerid, COLOR_GREY, "Anda tidak berada di kendaraan yang berfungsi.");
+
+	if(player_product_id[playerid] != -1)
+	{
+	    new order_id = player_product_id[playerid];
+        new bool: is_product = GetVehicleModel(vehicleid) == 414 ? true : false;
+
+		if(!is_product) SetPlayerCheckpoint(playerid, BizzAInfo[order_id][aAreaFillX], BizzAInfo[order_id][aAreaFillY], BizzAInfo[order_id][aAreaFillZ], 6.0);
+		else SetPlayerCheckpoint(playerid, BizzInfo[order_id][bEntranceX], BizzInfo[order_id][bEntranceY], BizzInfo[order_id][bEntranceZ], 6.0);
+
+		return Send(playerid, COLOR_GREY, "Anda sudah memenuhi pesanan, label diatur di tempat bongkar muat.");
+	}
+
+	return ProductList(playerid, GetVehicleModel(vehicleid) == 414 ? true : false);
+}
