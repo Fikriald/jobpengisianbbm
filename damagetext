@@ -1,0 +1,29 @@
+public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
+{
+    new s[20];
+	format(s, 20, "-Damage %.0f", amount);
+	TextDrawSetString(TakeDamage[playerid], s);
+	TextDrawShowForPlayer(playerid, TakeDamage[playerid]);
+	SetTimerEx("DestruirTextoDraw", 1000, false, "i", playerid);
+    return 1;
+
+	new Float: health;
+
+	/*
+
+	if(IsPlayerFly(playerid))
+	{
+		GetPlayerHealth(playerid, health);
+		SetPlayerHealth(playerid, health + amount);
+	}
+
+	*/
+	//----------------------------------------------------
+		if (weaponid == TASER_WEAPON)
+	{
+		if (taser[issuerid])
+		{
+			GetPlayerHealth(playerid, health);
+			SetPlayerHealth(playerid, health+amount);
+		}
+	}
